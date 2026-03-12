@@ -26,7 +26,7 @@ library(cowplot)
 # --------------------------------
 
 #open dataset
-df <- read.csv("C:/Users/jt3022/OneDrive - Imperial College London/Output/Private and Former Research/TFM paper/Data analysis ground work/New filing system/2 Data processing & R/conference_base.csv")
+df <- read.csv("./database.csv")
 
 #turn fp and months into factor
 df$fp <- factor (df$fp)
@@ -313,6 +313,7 @@ summary(COM)
 bgtest(LMmin)
 dwtest(LMmin)
 Box.test(resid(LMmin), type="Ljung",lag=1,fitdf=1)
+
 
 
 
